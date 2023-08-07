@@ -2,7 +2,7 @@
   title: "",
   authors: (),
   date: none,
-  logo: "../assets/espol_logo.svg",
+  logo: "../assets/espol_logo.png",
   body,
 ) = {
   // Set the document's basic properties.
