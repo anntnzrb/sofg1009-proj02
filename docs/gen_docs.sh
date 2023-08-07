@@ -1,7 +1,7 @@
 #!/bin/sh
 
-SRC_FILE='./main.typ'
-DEST_PDF='./proj02-g8.pdf'
+SRC_FILE='./src/main.typ'
+DEST_PDF='./dist/proj02-g8.pdf'
 
 # compile using typst
 typst "${SRC_FILE}" "${DEST_PDF}"
