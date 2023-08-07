@@ -1,6 +1,6 @@
 {
   "name": "Debian",
-  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
   "features": {
     // deno
     "ghcr.io/devcontainers-contrib/features/deno:1": {
@@ -10,14 +10,19 @@
     // ruby
     "ghcr.io/devcontainers/features/ruby:1": {
       "version": "3.2.2"
-    }
+    },
+
+    // typst
+    "ghcr.io/devcontainers-contrib/features/typst:1": {}
   },
   "customizations": {
     "vscode": {
       "extensions": [
         "denoland.vscode-deno",
         "sastan.twind-intellisense",
-        "Shopify.ruby-lsp"
+        "Shopify.ruby-lsp",
+        "nvarner.typst-lsp",
+        "tomoki1207.pdf"
       ]
     }
   }
