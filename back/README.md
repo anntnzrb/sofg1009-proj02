@@ -1,5 +1,12 @@
 # Backend
 
+## Pre-Requisitos
+
+- Ruby
+- Bundler
+
+**NOTA**: Revisar versiones en el archivo `.devcontainer/devcontainer.json`.
+
 ## Uso
 
 ### Instalar Dependencias
@@ -20,4 +27,8 @@ cp .env.example .env
 
 ```sh
 bundle exec rerun rackup
+
+# ó
+
+bundle exec rerun rackup --port <PORT>
 ```
