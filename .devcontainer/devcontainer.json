@@ -1,0 +1,24 @@
+{
+  "name": "Debian",
+  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "features": {
+    // deno
+    "ghcr.io/devcontainers-contrib/features/deno:1": {
+      "version": "1.36.0"
+    },
+
+    // ruby
+    "ghcr.io/devcontainers/features/ruby:1": {
+      "version": "3.2.2"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "denoland.vscode-deno",
+        "sastan.twind-intellisense",
+        "Shopify.ruby-lsp"
+      ]
+    }
+  }
+}
