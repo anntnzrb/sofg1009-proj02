@@ -8,10 +8,10 @@
   // Set the document's basic properties.
   set document(author: authors.map(a => a.name), title: title)
   set page(paper: "us-letter", numbering: "1", number-align: center)
-  set text(font: "Linux Libertine", lang: "en")
+  set text(font: "Linux Libertine", lang: "es")
 
   // Set paragraph spacing.
-  show par: set block(above: 1.2em, below: 1.2em)
+  show par: set block(above: 2em, below: 3em)
 
   set heading(numbering: "1.1")
   set par(leading: 0.75em)
@@ -46,9 +46,8 @@
   v(2.4fr)
   pagebreak()
 
-
   // Main body.
-  set par(justify: true, leading: 1.25em)
+  set par(justify: true, leading: 1.5em)
 
   body
 }
