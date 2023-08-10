@@ -81,6 +81,11 @@ flexibilidad a los desarrolladores. Esto tambíen indica que podemos tener una
 aplicación web moderna y completamente funcional con un código fuente mínimo y
 un solo archivo.
 
+Además, para manejar la persistencia de datos en nuestra aplicación,
+utilizaremos *Firebase* #cite("firebase"), una base de datos no relacional
+proporcionada por *Google*. *Firebase* ofrece una variedad de servicios,
+incluyendo autenticación, almacenamiento y una base de datos en tiempo real.
+
 === Frontend
 
 Para el frontend de nuestra aplicación, utilizaremos *JavaScript* #cite("javascript"), un lenguaje
@@ -94,6 +99,9 @@ utilizaremos *Deno* #cite("deno"), un entorno de ejecución (_runtime_) para *Ja
 soporte nativo a *TypeScript* #cite("typescript") que se centra en la seguridad y la productividad.
 Junto a *Deno*, utilizaremos *Fresh* #cite("fresh"), un framework para *Deno* que nos permite
 crear aplicaciones web modernas con un esfuerzo mínimo.
+
+El frontend de nuestra aplicación se comunicará con el backend mencionado
+anteriormente, esto a través de una _API REST_.
 
 #pagebreak()
 
