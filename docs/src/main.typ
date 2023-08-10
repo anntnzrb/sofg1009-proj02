@@ -2,12 +2,13 @@
 
 #show: project.with(
   title: "Proyecto de Lenguajes de Programación II",
+  subtitle: "Escuela Superior Politécnica del Literal (ESPOL) - PAO I 2023",
   authors: (
     (name: "Juan Antonio González", email: "juangonz@espol.edu.ec", affiliation: "ESPOL (FIEC)"),
     (name: "Paul Gudiño", email: "pgudino@espol.edu.ec", affiliation: "ESPOL (FIEC)"),
     (name: "Cristopher Villa", email: "cgvilla@espol.edu.ec", affiliation: "ESPOL (FIEC)"),
   ),
-  date: "August 27, 2023",
+  date: "Agosto 27, 2023",
 )
 
 #outline(
@@ -105,15 +106,31 @@ anteriormente, esto a través de una _API REST_.
 
 #pagebreak()
 
-= Protototipo de Baja Fidelidad
+= Protototipo
 
 El prototipo de baja fidelidad para este proyecto se centrará en la definición
 de las características y funcionalidades clave de la aplicación, así como en la
 estructura general de la interfaz de usuario. Este prototipo se utilizará como
 una guía visual durante la fase de desarrollo de la aplicación.
 
-Éste será diseñado en la plataforma Figma, y se puede acceder a él a través del
-siguiente enlace: <URL>
+Éste será diseñado en la plataforma *Figma* #cite("figma"), a continuación la
+sección pertinente.
+
+== Prototipo de Baja Fidelidad en Figma
+
+Se puede acceder a este prototipo a través del siguiente enlace:
+
+"#link("https://www.figma.com/file/uDqW4tQ2VsqLIWA1gc5mat/Travel-Agency-Website-Design-(Community)?type=design&node-id=0%3A1&mode=design&t=rRmFCOuROXjUkpPG-1")[Figma: Prototipo de Baja Fidelidad]"
+
+#figure(
+  image("../assets/proto_01.jpeg", width: 70%),
+  caption: "Prototipo de Baja Fidelidad - Pantalla 1"
+)
+
+#figure(
+  image("../assets/proto_02.jpeg", width: 70%),
+  caption: "Prototipo de Baja Fidelidad - Pantalla 2"
+)
 
 #pagebreak()
 

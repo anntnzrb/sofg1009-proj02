@@ -1,5 +1,6 @@
 #let project(
   title: "",
+  subtitle: "",
   authors: (),
   date: none,
   logo: "../assets/espol_logo.png",
@@ -27,6 +28,8 @@
   text(1.1em, date)
   v(1.2em, weak: true)
   text(2em, weight: 700, title)
+  v(1.2em, weak: true)
+  text(1em, weight: 500, subtitle)
 
   // Author information.
   pad(
