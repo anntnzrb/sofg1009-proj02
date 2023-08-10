@@ -1,7 +1,7 @@
 #import "template.typ": *
 
 #show: project.with(
-  title: "Proyecto de LP II",
+  title: "Proyecto de Lenguajes de Programación II",
   authors: (
     (name: "Juan Antonio González", email: "juangonz@espol.edu.ec", affiliation: "ESPOL (FIEC)"),
     (name: "Paul Gudiño", email: "pgudino@espol.edu.ec", affiliation: "ESPOL (FIEC)"),
@@ -52,6 +52,12 @@ Una de las características principales de nuestra aplicación será una
 funcionalidad de búsqueda bajo ciertos parámetros. Esto permitirá a los usuarios
 encontrar lugares específicos según sus preferencias, como el tipo de entorno
 (ciudad, bosque, área protegida), entre otras.
+
+=== Historias de Usuario
+
+1. "Como usuario, quiero poder buscar rutas turísticas en Ecuador filtradas por ciudades, bosques y áreas protegidas."
+2. "Como usuario, quiero poder ver las rutas turísticas más votadas en Ecuador."
+3. "Como usuario, quiero poder ver las rutas turísticas recomendadas y no recomendas"
 
 == Lenguages de Programación y Paradigmas
 
