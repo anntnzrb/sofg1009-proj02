@@ -57,8 +57,9 @@ encontrar lugares específicos según sus preferencias, como el tipo de entorno
 === Historias de Usuario
 
 1. "Como usuario, quiero poder buscar rutas turísticas en Ecuador filtradas por ciudades, bosques y áreas protegidas."
-2. "Como usuario, quiero poder ver las rutas turísticas más votadas en Ecuador."
-3. "Como usuario, quiero poder ver las rutas turísticas recomendadas y no recomendas"
+2. "Como usuario, quiero poder dar mi opinión sobre la ruta seleccionada por comentarios y votación."
+3. "Como usuario, quiero poder añadir rutas como sitios turisticos, áreas protegidas y bosques."
+4. "Como usuario, quiero poder eliminar rutas y comentarios seleccionados."
 
 == Lenguages de Programación y Paradigmas
 
@@ -123,14 +124,20 @@ Se puede acceder a este prototipo a través del siguiente enlace:
 "#link("https://www.figma.com/file/uDqW4tQ2VsqLIWA1gc5mat/Travel-Agency-Website-Design-(Community)?type=design&node-id=0%3A1&mode=design&t=rRmFCOuROXjUkpPG-1")[Figma: Prototipo de Baja Fidelidad]"
 
 #figure(
-  image("../assets/proto_01.jpeg", width: 70%),
+  image("../assets/proto_01.png", width: 70%),
   caption: "Prototipo de Baja Fidelidad - Pantalla 1"
 )
 
 #figure(
-  image("../assets/proto_02.jpeg", width: 70%),
+  image("../assets/proto_02.png", width: 70%),
   caption: "Prototipo de Baja Fidelidad - Pantalla 2"
 )
+
+#figure(
+  image("../assets/proto_03.png", width: 70%),
+  caption: "Prototipo de Baja Fidelidad - Pantalla 3"
+)
+
 
 #pagebreak()
 
