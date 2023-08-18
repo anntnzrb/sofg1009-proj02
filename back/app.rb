@@ -1,6 +1,7 @@
 require_relative 'routes/helpers'
 require_relative 'comentarios'
 require_relative 'sitios'
+require_relative 'rutas'
 
 get '/' do
   <<-HTML
