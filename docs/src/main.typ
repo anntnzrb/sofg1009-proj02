@@ -138,7 +138,6 @@ Se puede acceder a este prototipo a través del siguiente enlace:
   caption: "Prototipo de Baja Fidelidad - Pantalla 3"
 )
 
-
 #pagebreak()
 
 = Gestión del Proyecto
@@ -158,6 +157,34 @@ En resumen, la utilización de *DevContainers* nos permitirá gestionar de maner
 eficiente el versionamiento de las tecnologías utilizadas en nuestro proyecto,
 proporcionando un entorno de desarrollo coherente y estandarizado para todos los
 desarrolladores del equipo.
+
+#pagebreak()
+
+= Desarrollo
+
+== Backend
+
+=== Endpoint: GET `/api/ciudad`
+
+#figure(
+  image("../assets/back_endpoint01.png", width: 100%),
+  caption: "Backend: Endpoint GET /api/ciudad #1"
+)
+
+#figure(
+  image("../assets/back_endpoint02.png", width: 100%),
+  caption: "Backend: Endpoint GET /api/ciudad #2"
+)
+
+#pagebreak()
+
+= Anexos
+
+== Código Fuente
+
+El código fuente de este proyecto se encuentra disponible en el siguiente
+#link("https://github.com/anntnzrb/sofg1009-proj02")[enlance a GitHub] \
+`<https://github.com/anntnzrb/sofg1009-proj02>`.
 
 #pagebreak()
 

@@ -49,6 +49,8 @@
   v(2.4fr)
   pagebreak()
 
+  show link: underline
+
   // Main body.
   set par(justify: true, leading: 1.5em)
 
