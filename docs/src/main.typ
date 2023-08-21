@@ -164,16 +164,34 @@ desarrolladores del equipo.
 
 == Backend
 
-=== Endpoint: GET `/api/ciudad`
+=== Endpoint: DELETE `/api/ruta/:id`
 
 #figure(
-  image("../assets/back_endpoint01.png", width: 100%),
-  caption: "Backend: Endpoint GET /api/ciudad #1"
+  image("../assets/back_delete_ruta_id01.png", width: 50%),
 )
 
 #figure(
-  image("../assets/back_endpoint02.png", width: 100%),
-  caption: "Backend: Endpoint GET /api/ciudad #2"
+  image("../assets/back_delete_ruta_id02.png", width: 50%),
+)
+
+#figure(
+  image("../assets/back_delete_ruta_id03.png", width: 100%),
+)
+
+#pagebreak()
+
+=== Endpoint: DELETE `/api/ruta/:id1/resenia/:id2`
+
+#figure(
+  image("../assets/back_delete_ruta_resenia01.png", width: 100%),
+)
+
+#figure(
+  image("../assets/back_delete_ruta_resenia02.png", width: 100%),
+)
+
+#figure(
+  image("../assets/back_delete_ruta_resenia03.png", width: 100%),
 )
 
 #pagebreak()
