@@ -36,3 +36,8 @@ get '/api/rutas/resena/:key' do
   search = "rutas/#{query}/resenias"
   get_data_raw(search).to_json
 end
+
+# DELETE: RUTA-ID
+delete '/api/rutas/:id' do
+  delete_data('rutas', params[:id]).to_json
+end

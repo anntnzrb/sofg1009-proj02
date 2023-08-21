@@ -11,4 +11,8 @@ helpers do
       response.body
     end
     
+    def delete_data(collection, id)
+      response = settings.firebase.delete("#{collection}/#{id}")
+      response.body
+    end
 end
