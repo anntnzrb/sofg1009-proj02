@@ -30,14 +30,18 @@ get '/api/rutas/ciudad/:ciudad' do
   get_data('rutas').select { |r| r["sitios"].any? { |s| s["ciudad"].downcase == query } }.to_json
 end
 
-# RUTA-RESENA
-get '/api/rutas/resena/:key' do
-  query = params[:key]
-  search = "rutas/#{query}/resenias"
-  get_data_raw(search).to_json
+# RUTA-RESENIA
+get '/api/rutas/resenia/:id' do
+  query = "rutas/#{params[:id]}/resenias"
+  get_data_raw(query).to_json
 end
 
 # DELETE: RUTA-ID
 delete '/api/rutas/:id' do
   delete_data('rutas', params[:id]).to_json
+end
+
+# DELTE: RUTA-RESENIA-ID
+delete '/api/rutas/:id1/resenia/:id2' do
+  delete_data("rutas/#{params[:id1]}/resenias", params[:id2]).to_json
 end
