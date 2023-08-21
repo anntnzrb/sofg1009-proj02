@@ -1,7 +1,4 @@
 require_relative 'routes/helpers'
-require_relative 'comentarios'
-require_relative 'sitios'
-require_relative 'rutas'
 
 get '/' do
   <<-HTML
@@ -18,7 +15,7 @@ end
 # ------------------------------------------------------------------------------
 
 get '/api/rutas' do
-  get_data('/rutas').to_json
+  get_data('rutas').to_json
 end
 
 # RUTA-CATEGORIA
@@ -31,4 +28,11 @@ end
 get '/api/rutas/ciudad/:ciudad' do
   query = params[:ciudad].downcase
   get_data('rutas').select { |r| r["sitios"].any? { |s| s["ciudad"].downcase == query } }.to_json
+end
+
+# RUTA-RESENA
+get '/api/rutas/resena/:key' do
+  query = params[:key]
+  search = "rutas/#{query}/resenias"
+  get_data_raw(search).to_json
 end

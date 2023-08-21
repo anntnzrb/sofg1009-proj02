@@ -10,4 +10,5 @@ helpers do
       response = settings.firebase.get(collection)
       response.body
     end
+    
 end
