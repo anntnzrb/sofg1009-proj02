@@ -15,4 +15,16 @@ helpers do
       response = settings.firebase.delete("#{collection}/#{id}")
       response.body
     end
+
+    def post_data(collection, data)
+      response = settings.firebase.push(collection, data)
+      response.body
+    end
+
+    def add_review(id, review)
+      route = get_data_raw("rutas/#{id}")
+      route["resenias"].push(review)
+      response = settings.firebase.update("rutas/#{id}", route)
+      response.body
+    end
 end

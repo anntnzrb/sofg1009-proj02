@@ -45,3 +45,15 @@ end
 delete '/api/rutas/:id1/resenia/:id2' do
   delete_data("rutas/#{params[:id1]}/resenias", params[:id2]).to_json
 end
+
+# POST: NUEVA RUTA
+post '/api/rutas' do
+  new_route = JSON.parse(request.body.read)
+  post_data('rutas', new_route).to_json
+end
+
+# POST: NUEVA RESEÑA
+post '/api/rutas/:id/resenia' do
+  new_review = JSON.parse(request.body.read)["resenia"]
+  add_review(params[:id], new_review).to_json
+end
