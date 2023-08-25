@@ -21,7 +21,7 @@ export default function Header({ active }: Props) {
           href="Destinos"
           class="text-gray-600 hover:underline"
         >
-         Destinos
+         Ciudad
         </a>
         <a
           href="/Bosques"
