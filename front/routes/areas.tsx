@@ -3,23 +3,13 @@ import { asset, Head } from "$fresh/runtime.ts";
 import Nav2 from "../components/Nav2.tsx";
 import Nav from "../components/Nav.tsx";
 import Card from "../components/Card.tsx";
-import { BACKEND_URL } from "../utils/constants.ts";
+import { getCategoryData } from "../utils/HelpersMethods.tsx";
 
-interface Ruta {
-  id: number;
-  nombre: string;
-  categoria: string;
-}
-
-const getAreasData = async () => {
-  const res = await fetch(BACKEND_URL + "/categoria/area");
-  const data = await res.json();
-  console.log(data);
-  return data;
-};
+type RutasList = Ruta[];
+let rutasResult: RutasList | undefined;
+rutasResult = await getCategoryData("/categoria/area");
 
 export default function AreasPage(props: PageProps) {
-  const rutas = getAreasData();
   return (
     <>
       <Head>
@@ -122,13 +112,18 @@ height: 67.005px;"
         >
           Añadir ruta +
         </button>
-        <Card
-          title="Mejores comidas"
-          category="Area"
-          place1="Quito"
-          place2="Guayaquil"
-          place3="Cuenca"
-        />
+        <div class="overflow-y-scroll bg-white w-3/5 min-h-[24em] rounded-2xl">
+          {rutasResult && rutasResult.map((ruta) => (
+            <Card
+              // key={ruta.id}
+              title={ruta.nombre}
+              category={ruta.categoria}
+              place1={ruta.sitios[0]?.nombre || ""}
+              place2={ruta.sitios[1]?.nombre || ""}
+              place3={ruta.sitios[2]?.nombre || ""}
+            />
+          ))}
+        </div>
       </main>
     </>
   );

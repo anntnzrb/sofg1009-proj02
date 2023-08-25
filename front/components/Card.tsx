@@ -10,7 +10,7 @@ export default function Card(
   { title, category, place1, place2, place3 }: Props,
 ) {
   return (
-    <div class="overflow-y-scroll bg-white w-3/5 min-h-[24em] rounded-2xl">
+    <div>
       <div class="grid grid-cols-4 gap-2 h-24 place-items-center ">
         <div class="grid grid-cols-2 col-span-2 gap-2 w-fit content-center max-w-md ">
           <h3 class="font-bold ">Nombre de ruta:</h3>
