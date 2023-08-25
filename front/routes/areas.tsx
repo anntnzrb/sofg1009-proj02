@@ -5,13 +5,16 @@ import Nav from "../components/Nav.tsx";
 import Card from "../components/Card.tsx";
 import { BACKEND_URL } from "../utils/constants.ts";
 
-let dataArea: any = [];
+interface Ruta {
+  id: number;
+  nombre: string;
+  categoria: string;
+}
 
 const getAreasData = async () => {
   const res = await fetch(BACKEND_URL + "/categoria/area");
   const data = await res.json();
   console.log(data);
-  dataArea = data;
   return data;
 };
 
