@@ -5,11 +5,9 @@ import Nav from "../components/Nav.tsx";
 import Card from "../components/Card.tsx";
 import { getCategoryData } from "../utils/HelpersMethods.tsx";
 
-type RutasList = Ruta[];
-let rutasResult: RutasList | undefined;
-rutasResult = await getCategoryData("/categoria/bosque");
+export default async function BosquesPage(props: PageProps) {
+  const rutasResult: Ruta[] = await getCategoryData("/categoria/bosque");
 
-export default function BosquesPage(props: PageProps) {
   return (
     <>
       <Head>
