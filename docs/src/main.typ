@@ -228,6 +228,12 @@ desarrolladores del equipo.
 
 #pagebreak()
 
+== Frontend
+
+TODO
+
+#pagebreak()
+
 = Anexos
 
 == Código Fuente
