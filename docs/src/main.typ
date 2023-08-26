@@ -164,66 +164,72 @@ desarrolladores del equipo.
 
 == Backend
 
-=== Endpoint: GET `/api/rutas/`
-
 #figure(
   image("../assets/endpoints/back_get_rutas.png", width: 100%),
+  caption: "Backend: Endpoint GET Ruta"
 )
-
-=== Endpoint: GET `/api/rutas/resenia/:id`
 
 #figure(
   image("../assets/endpoints/back_get_resenia_id.png", width: 100%),
-)
-
-=== Endpoint: POST `/api/rutas`
-
-#figure(
-  image("../assets/endpoints/back_post_ruta.png", width: 100%),
-)
-
-#figure(
-  image("../assets/endpoints/back_post_rutaDB.png", width: 50%),
-)
-
-=== Endpoint: POST `/api/rutas/:id/resenia`
-
-#figure(
-  image("../assets/endpoints/back_post_resenia.png", width: 100%),
-)
-
-#figure(
-  image("../assets/endpoints/back_post_reseniaDB.png", width: 50%),
-)
-
-=== Endpoint: DELETE `/api/ruta/:id`
-
-#figure(
-  image("../assets/endpoints/back_delete_ruta_id01.png", width: 50%),
-)
-
-#figure(
-  image("../assets/endpoints/back_delete_ruta_id02.png", width: 50%),
-)
-
-#figure(
-  image("../assets/endpoints/back_delete_ruta_id03.png", width: 100%),
+  caption: "Backend: Endpoint GET Reseña por ID"
 )
 
 #pagebreak()
 
-=== Endpoint: DELETE `/api/ruta/:id1/resenia/:id2`
+#figure(
+  image("../assets/endpoints/back_post_ruta.png", width: 100%),
+  caption: "Backend: Endpoint POST Ruta #1"
+)
+
+#figure(
+  image("../assets/endpoints/back_post_rutaDB.png", width: 50%),
+  caption: "Backend: Endpoint POST Ruta #2"
+)
+
+#pagebreak()
+
+#figure(
+  image("../assets/endpoints/back_post_resenia.png", width: 100%),
+  caption: "Backend: Endpoint POST Reseña #2"
+)
+
+#figure(
+  image("../assets/endpoints/back_post_reseniaDB.png", width: 50%),
+  caption: "Backend: Endpoint POST Reseña #3"
+)
+
+#pagebreak()
+
+#figure(
+  image("../assets/endpoints/back_delete_ruta_id01.png", width: 50%),
+  caption: "Backend: Endpoint DELETE Ruta #1"
+)
+
+#figure(
+  image("../assets/endpoints/back_delete_ruta_id02.png", width: 50%),
+  caption: "Backend: Endpoint DELETE Ruta #2"
+)
+
+#figure(
+  image("../assets/endpoints/back_delete_ruta_id03.png", width: 100%),
+  caption: "Backend: Endpoint DELETE Ruta #3"
+)
+
+#pagebreak()
 
 #figure(
   image("../assets/endpoints/back_delete_ruta_resenia01.png", width: 100%),
+  caption: "Backend: Endpoint DELETE Reseña #1"
 )
 
 #figure(
   image("../assets/endpoints/back_delete_ruta_resenia02.png", width: 100%),
+  caption: "Backend: Endpoint DELETE Reseña #2"
 )
 
 #figure(
   image("../assets/endpoints/back_delete_ruta_resenia03.png", width: 100%),
+  caption: "Backend: Endpoint DELETE Reseña #3"
 )
 
 #pagebreak()
