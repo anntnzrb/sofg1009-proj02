@@ -167,47 +167,47 @@ desarrolladores del equipo.
 === Endpoint: GET `/api/rutas/`
 
 #figure(
-  image("../assets/back_get_rutas.png", width: 100%),
+  image("../assets/endpoints/back_get_rutas.png", width: 100%),
 )
 
 === Endpoint: GET `/api/rutas/resenia/:id`
 
 #figure(
-  image("../assets/back_get_resenia_id.png", width: 100%),
+  image("../assets/endpoints/back_get_resenia_id.png", width: 100%),
 )
 
 === Endpoint: POST `/api/rutas`
 
 #figure(
-  image("../assets/back_post_ruta.png", width: 100%),
+  image("../assets/endpoints/back_post_ruta.png", width: 100%),
 )
 
 #figure(
-  image("../assets/back_post_rutaDB.png", width: 50%),
+  image("../assets/endpoints/back_post_rutaDB.png", width: 50%),
 )
 
 === Endpoint: POST `/api/rutas/:id/resenia`
 
 #figure(
-  image("../assets/back_post_resenia.png", width: 100%),
+  image("../assets/endpoints/back_post_resenia.png", width: 100%),
 )
 
 #figure(
-  image("../assets/back_post_reseniaDB.png", width: 50%),
+  image("../assets/endpoints/back_post_reseniaDB.png", width: 50%),
 )
 
 === Endpoint: DELETE `/api/ruta/:id`
 
 #figure(
-  image("../assets/back_delete_ruta_id01.png", width: 50%),
+  image("../assets/endpoints/back_delete_ruta_id01.png", width: 50%),
 )
 
 #figure(
-  image("../assets/back_delete_ruta_id02.png", width: 50%),
+  image("../assets/endpoints/back_delete_ruta_id02.png", width: 50%),
 )
 
 #figure(
-  image("../assets/back_delete_ruta_id03.png", width: 100%),
+  image("../assets/endpoints/back_delete_ruta_id03.png", width: 100%),
 )
 
 #pagebreak()
@@ -215,15 +215,15 @@ desarrolladores del equipo.
 === Endpoint: DELETE `/api/ruta/:id1/resenia/:id2`
 
 #figure(
-  image("../assets/back_delete_ruta_resenia01.png", width: 100%),
+  image("../assets/endpoints/back_delete_ruta_resenia01.png", width: 100%),
 )
 
 #figure(
-  image("../assets/back_delete_ruta_resenia02.png", width: 100%),
+  image("../assets/endpoints/back_delete_ruta_resenia02.png", width: 100%),
 )
 
 #figure(
-  image("../assets/back_delete_ruta_resenia03.png", width: 100%),
+  image("../assets/endpoints/back_delete_ruta_resenia03.png", width: 100%),
 )
 
 #pagebreak()
