@@ -230,7 +230,20 @@ desarrolladores del equipo.
 
 == Frontend
 
-TODO
+#figure(
+  image("../assets/front/front_page_ciudades.png", width: 100%),
+  caption: "Frontend: Sección de Ciudades"
+)
+
+#figure(
+  image("../assets/front/front_page_bosques.png", width: 100%),
+  caption: "Frontend: Sección de Bosques"
+)
+
+#figure(
+  image("../assets/front/front_page_bosques.png", width: 100%),
+  caption: "Frontend: Sección de Áreas Protegidas"
+)
 
 #pagebreak()
 
