@@ -29,6 +29,12 @@ get '/api/rutas/categoria/:categoria' do
   get_data_raw('rutas').select { |_, value| value['categoria'] == query }.to_json
 end
 
+# RUTA-ID
+get '/api/rutas/:id' do
+  query = "rutas/#{params[:id]}"
+  get_data_raw(query).to_json
+end
+
 # RUTA-CIUDAD
 get '/api/rutas/ciudad/:ciudad' do
   query = params[:ciudad].downcase
