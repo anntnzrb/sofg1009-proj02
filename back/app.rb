@@ -31,8 +31,7 @@ end
 
 # RUTA-ID
 get '/api/rutas/:id' do
-  query = "rutas/#{params[:id]}"
-  get_data_raw(query).to_json
+  get_data_raw('rutas').select { |key, _| key == params[:id] }.to_json
 end
 
 # RUTA-CIUDAD
