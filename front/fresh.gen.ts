@@ -7,6 +7,7 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/areas.tsx";
 import * as $3 from "./routes/bosques.tsx";
 import * as $4 from "./routes/ciudad.tsx";
+import * as $5 from "./routes/resenia/[id].tsx";
 import * as $$0 from "./islands/ReseniaButton.tsx";
 
 const manifest = {
@@ -16,6 +17,7 @@ const manifest = {
     "./routes/areas.tsx": $2,
     "./routes/bosques.tsx": $3,
     "./routes/ciudad.tsx": $4,
+    "./routes/resenia/[id].tsx": $5,
   },
   islands: {
     "./islands/ReseniaButton.tsx": $$0,

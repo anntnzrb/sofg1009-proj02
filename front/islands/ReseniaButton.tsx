@@ -1,11 +1,8 @@
 export function ReseniaButton({ id }: { id: string }) {
   return (
-    // <a href={`/islands/${id}/resenia`}>
-    // <button className="btn btn-primary">Reseña</button>
-    // </a>
     <button
       onClick={() => {
-        alert(id);
+        window.location.href = `/resenia/${id}`;
       }}
     >
       <svg
