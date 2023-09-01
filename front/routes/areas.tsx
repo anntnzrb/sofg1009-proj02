@@ -113,7 +113,7 @@ height: 67.005px;"
         <div class="overflow-y-scroll bg-white w-3/5 min-h-[24em] rounded-2xl">
           {rutasResult && rutasResult.map((ruta) => (
             <Card
-              // key={ruta.id}
+              id={ruta.id}
               title={ruta.nombre}
               category={ruta.categoria}
               place1={ruta.sitios[0]?.nombre || ""}

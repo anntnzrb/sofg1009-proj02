@@ -7,6 +7,7 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/areas.tsx";
 import * as $3 from "./routes/bosques.tsx";
 import * as $4 from "./routes/ciudad.tsx";
+import * as $$0 from "./islands/ReseniaButton.tsx";
 
 const manifest = {
   routes: {
@@ -16,7 +17,9 @@ const manifest = {
     "./routes/bosques.tsx": $3,
     "./routes/ciudad.tsx": $4,
   },
-  islands: {},
+  islands: {
+    "./islands/ReseniaButton.tsx": $$0,
+  },
   baseUrl: import.meta.url,
 };
 

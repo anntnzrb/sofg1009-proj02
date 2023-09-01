@@ -1,4 +1,7 @@
+import { ReseniaButton } from "../islands/ReseniaButton.tsx";
+
 type Props = {
+  id: string;
   title: string;
   category: string;
   place1: string;
@@ -7,14 +10,14 @@ type Props = {
 };
 
 export default function Card(
-  { title, category, place1, place2, place3 }: Props,
+  { id, title, category, place1, place2, place3 }: Props,
 ) {
   return (
     <div>
       <div class="grid grid-cols-4 gap-2 h-36 max-h-max place-items-center ">
         <div class="grid grid-cols-2 col-span-2 gap-2  justify-items-end max-w-md ">
           <h3 class="font-bold ">Nombre de ruta:</h3>
-          <p class ="justify-self-start">{title}</p>
+          <p class="justify-self-start">{title}</p>
           <h3 class="font-bold ">Categoria:</h3>
           <p class="justify-self-start">{category}</p>
         </div>
@@ -25,20 +28,7 @@ export default function Card(
           <li>{place3}</li>
         </ul>
         <div class="flex gap-7 ">
-          <button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="35"
-              height="35"
-              viewBox="0 0 35 35"
-              fill="none"
-            >
-              <path
-                d="M0.39375 0.04375C0.13125 0.04375 0 0.21875 0 0.4375V25.8563C0 26.075 0.175 26.25 0.39375 26.25H26.25L35 35V0.39375C35 0.13125 34.825 0 34.6063 0H0.4375L0.39375 0.04375Z"
-                fill="black"
-              />
-            </svg>
-          </button>
+          <ReseniaButton id={id} />
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
