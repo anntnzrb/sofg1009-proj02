@@ -39,12 +39,12 @@ export const getRutaData = async (id: string): Promise<Ruta> => {
 };
 
 export const getReseniaData = async (id: string): Promise<Ruta> => {
-  const res = await fetch(BACKEND_URL + `resenia/${id}`);
+  const res = await fetch(BACKEND_URL + `/resenia/${id}`);
 
   if (!res.ok) {
     throw new Error(`Failed to fetch resenia data with status: ${res.status}`);
   }
 
-  const data: [] = await res.json();
+  const data: string[] = await res.json();
   return data;
 };

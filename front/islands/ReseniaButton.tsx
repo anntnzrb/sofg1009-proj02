@@ -1,6 +1,7 @@
 export function ReseniaButton({ id }: { id: string }) {
   return (
     <button
+      title="Ver reseñas"
       onClick={() => {
         window.location.href = `/resenia/${id}`;
       }}
