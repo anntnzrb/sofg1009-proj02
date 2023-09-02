@@ -16,11 +16,6 @@ export default async function CiudadPage(props: PageProps) {
 
       <div class="bg-red-100">
         <Nav active="/" />
-
-        <div>
-          Hello!
-          {/* {rutas.map((r) => <h1 class="text-2xl">{r.ciudad}</h1>)} */}
-        </div>
       </div>
       <Nav2 active="/" />
       <main
@@ -55,7 +50,7 @@ height: 50px;"
               Ciudad
             </button>
           </a>
-          <a href="/bosques">
+          <a href="/bosque">
             <button
               class="px-3 py-2 bg-white rounded border(gray-500 2) hover:bg-gray-200 active:bg-gray-300  flex gap-3 justify-center items-center"
               style="border-radius: 80px;
@@ -78,7 +73,7 @@ height: 50px;"
               Bosques
             </button>
           </a>
-          <a href="/areas">
+          <a href="/area">
             <button
               class=" px-3 py-2 bg-white rounded border(gray-500 2) hover:bg-gray-200 active:bg-gray-300 flex gap-3 justify-center items-center"
               style="border-radius: 80px;
@@ -113,7 +108,7 @@ height: 67.005px;"
         <div class="overflow-y-scroll bg-white max-h-[26rem] w-3/5 min-h-[24em] rounded-2xl">
           {rutasResult && rutasResult.map((ruta) => (
             <Card
-              // key={ruta.id}
+              id={ruta.id}
               title={ruta.nombre}
               category={ruta.categoria}
               place1={ruta.sitios[0]?.nombre || ""}

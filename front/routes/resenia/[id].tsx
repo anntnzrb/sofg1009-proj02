@@ -12,6 +12,7 @@ export default async function ReseniaPage(req: Request, ctx: RouteContext) {
   const id_ruta = id;
   const ruta: Ruta = await getRutaData(id);
   const resenia: Resenia[] = await getReseniaData(id);
+  const redireccionamiento = "/" + ruta.categoria;
 
   return (
     <>
@@ -42,7 +43,7 @@ export default async function ReseniaPage(req: Request, ctx: RouteContext) {
             {ruta.nombre}
           </div>
         </div>
-        <BackButton ruta="/areas" />
+        <BackButton ruta={redireccionamiento} />
         <ReseniaCreateButton id={id} />
         <div class="overflow-y-scroll bg-white w-3/5 min-h-[24em] rounded-2xl">
           {resenia.map((r) => (

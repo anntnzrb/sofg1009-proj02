@@ -18,19 +18,19 @@ export default function Header({ active }: Props) {
       </div>
       <div class="flex items-center gap-8">
         <a
-          href="Destinos"
+          href="ciudad"
           class="text-gray-600 hover:underline"
         >
-         Ciudad
+          Ciudad
         </a>
         <a
-          href="/Bosques"
+          href="/bosque"
           class="text-gray-600 hover:underline"
         >
           Bosques
         </a>
         <a
-          href="/Areas"
+          href="/area"
           class="text-gray-600 hover:underline"
         >
           Areas Protegitas
