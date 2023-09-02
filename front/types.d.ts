@@ -18,3 +18,8 @@ interface Sitio {
   ciudad: string;
   nombre: string;
 }
+
+interface Resenia {
+  id: string;
+  comentario: string;
+}

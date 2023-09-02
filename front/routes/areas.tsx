@@ -7,7 +7,6 @@ import { getCategoryData } from "../utils/HelpersMethods.tsx";
 
 export default async function AreasPage(props: PageProps) {
   const rutasResult: Ruta[] = await getCategoryData("/categoria/area");
-
   return (
     <>
       <Head>

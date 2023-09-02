@@ -1,6 +1,6 @@
 type Props = {
+  id: string;
   resenia: string;
-
 };
 
 export default function Card(

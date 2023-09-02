@@ -1,5 +1,5 @@
 import { BACKEND_URL } from "../utils/constants.ts";
-import type { Ruta } from "../types.d.ts";
+import type { Resenia, Ruta } from "../types.d.ts";
 
 type RutasList = Ruta[];
 type RutaData = Ruta;
@@ -38,15 +38,23 @@ export const getRutaData = async (id: string): Promise<Ruta> => {
   return ruta[0];
 };
 
-export const getReseniaData = async (id: string): Promise<Ruta> => {
+export const getReseniaData = async (id: string): Promise<Resenia[]> => {
   const res = await fetch(BACKEND_URL + `/resenia/${id}`);
 
   if (!res.ok) {
     throw new Error(`Failed to fetch resenia data with status: ${res.status}`);
   }
+  const data = await res.json();
 
-  const data: string[] = await res.json();
-  return data;
+  const resenias: Resenia[] = Object.keys(data).map(key => {
+    return {
+      id: key,
+      comentario: data[key]
+    };
+  });
+
+  return resenias;
+  
 };
 
 export const postReseniaData = async (

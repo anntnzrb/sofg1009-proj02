@@ -1,5 +1,6 @@
 import { postReseniaData } from "../../../utils/HelpersMethods.tsx";
-import { Handlers } from "$fresh/server.ts";
+import { Handlers, PageProps } from "$fresh/server.ts";
+import { BackButton } from "../../../islands/BackButton.tsx";
 
 export const handler: Handlers = {
   async POST(req, ctx) {
@@ -19,21 +20,26 @@ export const handler: Handlers = {
   },
 };
 
-export default function ReseniaForm() {
+export default function ReseniaForm(props: PageProps) {
+  const { id } = props.params;
+  const ruta = "/resenia/" + id;
   return (
-    <form method="POST" class="flex flex-col gap-4">
-      <textarea
-        required
-        name="resenia"
-        class="w-full h-24 rounded-xl border-2 border-gray-300"
-        placeholder="Escribe tu reseña"
-      />
-      <button
-        type="submit"
-        class="bg-red-500 text-white rounded-xl py-2 px-4"
-      >
-        Enviar
-      </button>
-    </form>
+    <div>
+      <form method="POST" class="flex flex-col gap-4">
+        <textarea
+          required
+          name="resenia"
+          class="w-full h-24 rounded-xl border-2 border-gray-300"
+          placeholder="Escribe tu reseña"
+        />
+        <button
+          type="submit"
+          class="bg-red-500 text-white rounded-xl py-2 px-4"
+        >
+          Enviar
+        </button>
+      </form>
+      <BackButton ruta={ruta}/>
+    </div>
   );
 }

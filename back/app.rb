@@ -44,11 +44,16 @@ end
 get '/api/rutas/resenia/:id' do
   query = "rutas/#{params[:id]}/resenias"
   data = get_data_raw(query)
-  
+
+  # Transformar el array a un hash con índices como claves
+  indexed_data = data.each_with_index.map { |item, index| [index, item] }.to_h
+
   # Eliminar valores nil
-  cleaned_data = data.compact
+  cleaned_data = indexed_data.compact
+
   cleaned_data.to_json
 end
+
 
 
 # DELETE: RUTA-ID
