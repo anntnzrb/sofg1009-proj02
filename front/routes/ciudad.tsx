@@ -110,7 +110,7 @@ height: 67.005px;"
         >
           Añadir ruta +
         </button>
-        <div class="overflow-y-scroll bg-white w-3/5 min-h-[24em] rounded-2xl">
+        <div class="overflow-y-scroll bg-white max-h-[26rem] w-3/5 min-h-[24em] rounded-2xl">
           {rutasResult && rutasResult.map((ruta) => (
             <Card
               // key={ruta.id}

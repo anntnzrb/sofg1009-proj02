@@ -8,10 +8,10 @@ export default function Card(
 ) {
   return (
     <div>
-      <div class="grid grid-cols-4 gap-2 h-36 max-h-max place-items-center ">
-        <div class="grid grid-cols-2 col-span-2 gap-2  justify-items-end max-w-md ">
-          <h3 class="font-bold ">Comentario:</h3>
-          <p class="justify-self-start">{resenia}</p>
+      <div class="grid grid-cols-3 gap-2 h-36 max-h-max place-items-center ">
+        <div class="grid grid-cols-3 col-span-2 gap-2  max-w-lg ">
+          <h3 class="place-self-center font-bold ">Comentario:</h3>
+          <p class="justify-self-start col-span-2 ">{resenia}</p>
         </div>
         <div class="flex gap-7 ">
           <button>
