@@ -46,15 +46,14 @@ export const getReseniaData = async (id: string): Promise<Resenia[]> => {
   }
   const data = await res.json();
 
-  const resenias: Resenia[] = Object.keys(data).map(key => {
+  const resenias: Resenia[] = Object.keys(data).map((key) => {
     return {
       id: key,
-      comentario: data[key]
+      comentario: data[key],
     };
   });
 
   return resenias;
-  
 };
 
 export const postReseniaData = async (
@@ -71,5 +70,21 @@ export const postReseniaData = async (
 
   if (!res.ok) {
     throw new Error(`Failed to post resenia data with status: ${res.status}`);
+  }
+};
+
+export const deleteReseniaData = async (
+  id: string,
+  reseniaId: string,
+): Promise<void> => {
+  console.log(BACKEND_URL + `/${id}/resenia/${reseniaId}`);
+  const res = await fetch(BACKEND_URL + `/${id}/resenia/${reseniaId}`, {
+    method: "DELETE",
+  });
+
+  if (!res.ok) {
+    throw new Error(
+      `Failed to delete resenia data with status: ${res.status}`,
+    );
   }
 };

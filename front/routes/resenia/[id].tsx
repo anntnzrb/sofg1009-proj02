@@ -9,9 +9,9 @@ import { BackButton } from "../../islands/BackButton.tsx";
 
 export default async function ReseniaPage(req: Request, ctx: RouteContext) {
   const { id } = ctx.params;
+  const id_ruta = id;
   const ruta: Ruta = await getRutaData(id);
   const resenia: Resenia[] = await getReseniaData(id);
-  console.log(resenia);
 
   return (
     <>
@@ -47,7 +47,8 @@ export default async function ReseniaPage(req: Request, ctx: RouteContext) {
         <div class="overflow-y-scroll bg-white w-3/5 min-h-[24em] rounded-2xl">
           {resenia.map((r) => (
             <CardResenia
-              id={r.id}
+              ruta_id={id_ruta}
+              resenia_id={r.id}
               resenia={r.comentario}
             />
           ))}

@@ -12,6 +12,7 @@ import * as $6 from "./routes/resenia/[id]/create.tsx";
 import * as $$0 from "./islands/BackButton.tsx";
 import * as $$1 from "./islands/ReseniaButton.tsx";
 import * as $$2 from "./islands/ReseniaCreateButton.tsx";
+import * as $$3 from "./islands/ReseniaDeleteButton.tsx";
 
 const manifest = {
   routes: {
@@ -27,6 +28,7 @@ const manifest = {
     "./islands/BackButton.tsx": $$0,
     "./islands/ReseniaButton.tsx": $$1,
     "./islands/ReseniaCreateButton.tsx": $$2,
+    "./islands/ReseniaDeleteButton.tsx": $$3,
   },
   baseUrl: import.meta.url,
 };
