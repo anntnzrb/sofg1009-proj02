@@ -43,8 +43,13 @@ end
 # RUTA-RESENIA
 get '/api/rutas/resenia/:id' do
   query = "rutas/#{params[:id]}/resenias"
-  get_data_raw(query).to_json
+  data = get_data_raw(query)
+  
+  # Eliminar valores nil
+  cleaned_data = data.compact
+  cleaned_data.to_json
 end
+
 
 # DELETE: RUTA-ID
 delete '/api/rutas/:id' do

@@ -48,3 +48,20 @@ export const getReseniaData = async (id: string): Promise<Ruta> => {
   const data: string[] = await res.json();
   return data;
 };
+
+export const postReseniaData = async (
+  id: string,
+  resenia: string,
+): Promise<void> => {
+  const res = await fetch(BACKEND_URL + `/${id}/resenia`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ resenia }),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to post resenia data with status: ${res.status}`);
+  }
+};
