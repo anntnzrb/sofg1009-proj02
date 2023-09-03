@@ -11,12 +11,10 @@ export default function Card(
 ) {
   return (
     <div>
-      <div class="grid grid-cols-3 gap-2 h-36 max-h-max place-items-center ">
-        <div class="grid grid-cols-3 col-span-2 gap-2  max-w-lg ">
-          <h3 class="place-self-center font-bold ">Comentario:</h3>
-          <p class="justify-self-start col-span-2 ">{resenia}</p>
-        </div>
-        <div class="flex gap-7 ">
+      <div class=" flex justify-center items-center gap-8 max-h-max h-[10rem] ">
+          <h3 class=" min-w-[92px] font-bold ">Comentario:</h3>
+          <p class="min-w-[25rem] max-w-[25rem] ">{resenia}</p>
+        <div class="">
           <ReseniaDeleteButton ruta_id={ruta_id} resenia_id={resenia_id} />
         </div>
       </div>

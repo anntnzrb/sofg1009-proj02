@@ -46,39 +46,43 @@ export default function ReseniaForm(props: PageProps) {
       >
         <h1 class="text-3xl text-white font-bold">Turismo en Ecuador</h1>
 
-        <div
-          class="bg-white justify-center rounded-xl grid grid-cols-3 gap-4 place-items-center gap-5"
-          style="width:700px; height: 80px;border-radius: 80px;"
-        >
-          <div></div>
-          <div>
-            Nombre
+        <BackButton ruta={ruta} />
+        <div class="bg-white w-[56rem] h-[40rem] rounded-lg mb-[5rem] justify-items-center ">
+          <div class="grid grid-rows-2 grid-cols-1 justify-items-center h-[8rem] mt-8">
+            <h1 class="text-2xl font-bold text-gray-700 w-max col-span-2 h-lg">
+              Añadir comentario
+            </h1>
+            <form
+              method="POST"
+              class="grid grid-rows-4 grid-cols-1 place-items-center h-[32rem] w-[48rem] font-semibold text-[20px] "
+              style=""
+            >
+                <div class="flex w-[50rem] justify-around">
+                <label htmlFor="nombre-ruta"> Ruta </label>
+                <p name="nombre-ruta" >Nombre de la ruta </p>
+                </div>
+                <div class="flex w-[50rem] justify-around">
+                <label class="font-semibold" htmlFor="autor">Autor</label>
+                <input type="text" name="autor" class=" border-2 border-green-400"/>
+                </div>
+                <div class="flex w-[50rem] justify-around">
+                <label htmlFor="comentario">Comentario</label>
+                <textarea name="comentario" class="w-[300px] border-2 border-green-400"/>
+                </div>
+                <div class="flex w-[50rem] justify-around">
+                <label htmlFor="calificacion">Calificación</label>
+                <input type="number" name="calificacion" min="1" max="5" class="border-2 border-green-400" />
+                </div>
+                <button
+                  type="submit"
+                  class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
+                >
+                  Enviar
+                </button>
+              
+            </form>
           </div>
         </div>
-        <BackButton ruta={ruta} />
-        <form
-          method="POST"
-          class="bg-white justify-center rounded-xl grid grid-cols-3 gap-4 place-items-center gap-5"
-          style="width:700px; height: 80px;border-radius: 80px;"
-        >
-          <div></div>
-          <div>
-            <input
-              type="text"
-              name="resenia"
-              placeholder="Reseña"
-              class="bg-gray-100 rounded-xl w-3/5 h-10"
-            />
-          </div>
-          <div>
-            <button
-              type="submit"
-              class="bg-red-500 rounded-xl w-3/5 h-10"
-            >
-              Enviar
-            </button>
-          </div>
-        </form>
       </main>
     </>
   );

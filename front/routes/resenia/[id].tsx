@@ -35,17 +35,19 @@ export default async function ReseniaPage(req: Request, ctx: RouteContext) {
         <h1 class="text-3xl text-white font-bold">Turismo en Ecuador</h1>
 
         <div
-          class="bg-white justify-center rounded-xl grid grid-cols-3 gap-4 place-items-center gap-5"
+          class="bg-white justify-center rounded-xl grid  gap-4 place-items-center gap-5"
           style="width:700px; height: 80px;border-radius: 80px;"
         >
-          <div></div>
-          <div>
+          <div class="text-2xl font-bold text-gray-700">
             {ruta.nombre}
           </div>
         </div>
-        <BackButton ruta={redireccionamiento} />
-        <ReseniaCreateButton id={id} />
-        <div class="overflow-y-scroll bg-white w-3/5 min-h-[24em] rounded-2xl">
+        <div class ="flex justify-center items-center gap-8">
+          <BackButton ruta={redireccionamiento} />
+          <ReseniaCreateButton id={id} />
+        </div>
+      
+        <div class="overflow-y-scroll bg-white w-3/5 min-h-[24em] max-h-[26rem] rounded-2xl">
           {resenia.map((r) => (
             <CardResenia
               ruta_id={id_ruta}
