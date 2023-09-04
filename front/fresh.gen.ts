@@ -2,33 +2,31 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $0 from "./routes/_404.tsx";
-import * as $1 from "./routes/_app.tsx";
-import * as $2 from "./routes/area.tsx";
-import * as $3 from "./routes/bosque.tsx";
-import * as $4 from "./routes/ciudad.tsx";
-import * as $5 from "./routes/resenia/[id].tsx";
-import * as $6 from "./routes/resenia/[id]/create.tsx";
+import * as $0 from "./routes/[cat].tsx";
+import * as $1 from "./routes/_404.tsx";
+import * as $2 from "./routes/index.tsx";
+import * as $3 from "./routes/resenia/[id].tsx";
+import * as $4 from "./routes/resenia/[id]/create.tsx";
 import * as $$0 from "./islands/BackButton.tsx";
-import * as $$1 from "./islands/ReseniaButton.tsx";
-import * as $$2 from "./islands/ReseniaCreateButton.tsx";
-import * as $$3 from "./islands/ReseniaDeleteButton.tsx";
+import * as $$1 from "./islands/CatButton.tsx";
+import * as $$2 from "./islands/ReseniaButton.tsx";
+import * as $$3 from "./islands/ReseniaCreateButton.tsx";
+import * as $$4 from "./islands/ReseniaDeleteButton.tsx";
 
 const manifest = {
   routes: {
-    "./routes/_404.tsx": $0,
-    "./routes/_app.tsx": $1,
-    "./routes/area.tsx": $2,
-    "./routes/bosque.tsx": $3,
-    "./routes/ciudad.tsx": $4,
-    "./routes/resenia/[id].tsx": $5,
-    "./routes/resenia/[id]/create.tsx": $6,
+    "./routes/[cat].tsx": $0,
+    "./routes/_404.tsx": $1,
+    "./routes/index.tsx": $2,
+    "./routes/resenia/[id].tsx": $3,
+    "./routes/resenia/[id]/create.tsx": $4,
   },
   islands: {
     "./islands/BackButton.tsx": $$0,
-    "./islands/ReseniaButton.tsx": $$1,
-    "./islands/ReseniaCreateButton.tsx": $$2,
-    "./islands/ReseniaDeleteButton.tsx": $$3,
+    "./islands/CatButton.tsx": $$1,
+    "./islands/ReseniaButton.tsx": $$2,
+    "./islands/ReseniaCreateButton.tsx": $$3,
+    "./islands/ReseniaDeleteButton.tsx": $$4,
   },
   baseUrl: import.meta.url,
 };
