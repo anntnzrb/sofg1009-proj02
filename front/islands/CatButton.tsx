@@ -5,18 +5,23 @@ import { handler } from '../routes/[cat].tsx';
 interface Props {
     ruta: string;
     currentRuta: string;
+    path: string;
   }
 
-export function CatButton( {ruta, currentRuta}: Props ) { 
+export function CatButton( {ruta, currentRuta,path}: Props ) { 
     const [isSelected, setIsSelected] = useState(false);
     const relleno = isSelected ? "border-radius: 80px;background: var(--navi, #7483BD);width: 200px;height: 50px;" : "border-radius: 80px;width: 200px;height: 50px;";
  
     const opacidad = isSelected ? "1" : "0.4";
 
+    if("/"+currentRuta == path ){
+        setIsSelected(true);
+    }
 
     return (
         <>
-        <button onClick={() => setIsSelected(!isSelected)}
+        <a href={path}>
+        <button 
               class="px-3 py-2 bg-white rounded border(gray-500 2) hover:bg-gray-200 active:bg-gray-300  flex gap-3 justify-center items-center"
               style={relleno}
             >
@@ -35,6 +40,7 @@ export function CatButton( {ruta, currentRuta}: Props ) {
               </svg>
               {ruta}
             </button>
+            </a>
         </>
     );
 }

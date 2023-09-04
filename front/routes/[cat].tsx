@@ -38,15 +38,10 @@ export default  function CatPage(props: PageProps) {
           class="bg-white justify-center rounded-xl grid grid-cols-3 gap-4 place-items-center gap-5"
           style="width:700px; height: 80px;border-radius: 80px;"
         >
-          <a href="/ciudad">
-            <CatButton currentRuta={ruta} ruta="Ciudad" />
-          </a>
-          <a href="/bosque">
-            <CatButton currentRuta={ruta} ruta="Bosques" />
-          </a>
-          <a href="/area">
-            <CatButton currentRuta={ruta} ruta="Áreas Protegidas" />
-          </a>
+            <CatButton currentRuta={ruta} ruta="Ciudad" path="/ciudad" />
+            <CatButton currentRuta={ruta} ruta="Bosques"  path="/bosque"/>
+            <CatButton currentRuta={ruta} ruta="Áreas Protegidas"  path="/area"/>
+          
         </div>
         <button
           class="px-3 py-2 bg-[#bef264]  border(gray-500 2) hover:bg-[#d9f99d]  flex gap-3 justify-center items-center"
