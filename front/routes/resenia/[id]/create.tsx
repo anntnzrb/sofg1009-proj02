@@ -70,16 +70,7 @@ export default function ReseniaForm(props: PageProps) {
                   class="w-[300px] border-2 border-green-400"
                 />
               </div>
-              <div class="flex w-[50rem] justify-around">
-                <label htmlFor="calificacion">Calificación</label>
-                <input
-                  type="number"
-                  name="calificacion"
-                  min="1"
-                  max="5"
-                  class="border-2 border-green-400"
-                />
-              </div>
+
               <button
                 type="submit"
                 class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
