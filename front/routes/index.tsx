@@ -7,11 +7,11 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>front</title>
+        <title>TurEC</title>
       </head>
       <body>
         <main
-          class="w-full flex px-8 py-10 min-h-[50rem] justify-center items-center flex-col gap-8 bg-cover bg-center bg-no-repeat bg-gray-100"
+          class="w-full flex min-h-[60rem] justify-center items-center flex-col gap-8 bg-cover bg-center bg-no-repeat bg-gray-100"
           style={`background-image: url(${asset("/travelImg.png")})`}
         >
           <h1 class="text-3xl text-white font-bold">Turismo en Ecuador</h1>
