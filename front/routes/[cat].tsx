@@ -1,24 +1,24 @@
-import { Handlers,PageProps } from "$fresh/server.ts";
+import { Handlers, PageProps } from "$fresh/server.ts";
 import { asset, Head } from "$fresh/runtime.ts";
 import Nav2 from "../components/Nav2.tsx";
 import Nav from "../components/Nav.tsx";
 import Card from "../components/Card.tsx";
 import { getCategoryData } from "../utils/HelpersMethods.tsx";
 import { CatButton } from "../islands/CatButton.tsx";
-import { useState } from 'preact/hooks';
+import { useState } from "preact/hooks";
 
 export const handler: Handlers = {
-  async GET(request,context){
+  async GET(request, context) {
     const { cat } = context.params;
-    const rutasResult: Ruta[] = await getCategoryData("/categoria/"+cat);
+    const rutasResult: Ruta[] = await getCategoryData("/categoria/" + cat);
     return context.render(rutasResult);
-  }
-}
+  },
+};
 
-export default  function CatPage(props: PageProps) {
-  const  rutasResult: Ruta[]  = props.data;
+export default function CatPage(props: PageProps) {
+  const rutasResult: Ruta[] = props.data;
   const ruta = props.params.cat;
-  
+
   return (
     <>
       <Head>
@@ -38,13 +38,12 @@ export default  function CatPage(props: PageProps) {
           class="bg-white justify-center rounded-xl grid grid-cols-3 gap-4 place-items-center gap-5"
           style="width:700px; height: 80px;border-radius: 80px;"
         >
-            <CatButton currentRuta={ruta} ruta="Ciudad" path="/ciudad" />
-            <CatButton currentRuta={ruta} ruta="Bosques"  path="/bosque"/>
-            <CatButton currentRuta={ruta} ruta="Áreas Protegidas"  path="/area"/>
-          
+          <CatButton currentRuta={ruta} ruta="Ciudad" path="/ciudad" />
+          <CatButton currentRuta={ruta} ruta="Bosques" path="/bosque" />
+          <CatButton currentRuta={ruta} ruta="Áreas Protegidas" path="/area" />
         </div>
         <button
-          class="px-3 py-2 bg-[#bef264]  border(gray-500 2) hover:bg-[#d9f99d]  flex gap-3 justify-center items-center"
+          class=" hover:scale-105 transition-all px-3 py-2 bg-[#bef264]  border(gray-500 2) hover:bg-[#d9f99d]  flex gap-3 justify-center items-center"
           style="border-radius: 48px ;
 width: 217px;
 height: 67.005px;"

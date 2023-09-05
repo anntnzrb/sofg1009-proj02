@@ -72,7 +72,7 @@ export function CatButton({ ruta, currentRuta, path }: Props) {
 
   return (
     <>
-      <a href={path}>
+      <a class="hover:scale-105 transition-all  " href={path}>
         <button
           class="px-3 py-2 bg-white rounded border(gray-500 2) hover:bg-gray-200 active:bg-gray-300  flex gap-3 justify-center items-center"
           style={relleno}
