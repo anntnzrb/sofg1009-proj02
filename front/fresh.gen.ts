@@ -4,9 +4,10 @@
 
 import * as $0 from "./routes/[cat].tsx";
 import * as $1 from "./routes/_404.tsx";
-import * as $2 from "./routes/index.tsx";
-import * as $3 from "./routes/resenia/[id].tsx";
-import * as $4 from "./routes/resenia/[id]/create.tsx";
+import * as $2 from "./routes/_app.tsx";
+import * as $3 from "./routes/index.tsx";
+import * as $4 from "./routes/resenia/[id].tsx";
+import * as $5 from "./routes/resenia/[id]/create.tsx";
 import * as $$0 from "./islands/BackButton.tsx";
 import * as $$1 from "./islands/CardResenia.tsx";
 import * as $$2 from "./islands/CatButton.tsx";
@@ -17,9 +18,10 @@ const manifest = {
   routes: {
     "./routes/[cat].tsx": $0,
     "./routes/_404.tsx": $1,
-    "./routes/index.tsx": $2,
-    "./routes/resenia/[id].tsx": $3,
-    "./routes/resenia/[id]/create.tsx": $4,
+    "./routes/_app.tsx": $2,
+    "./routes/index.tsx": $3,
+    "./routes/resenia/[id].tsx": $4,
+    "./routes/resenia/[id]/create.tsx": $5,
   },
   islands: {
     "./islands/BackButton.tsx": $$0,
