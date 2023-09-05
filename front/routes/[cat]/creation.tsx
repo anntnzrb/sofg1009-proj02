@@ -33,9 +33,7 @@ export const handler: Handlers = {
       sitios.push(sitio2);
       sitios.push(sitio3);
     }
-
-    const sitio2 = form.get("sitio2")?.toString();
-    const sitio3 = form.get("sitio3")?.toString();
+    resenias.push(form.get("resenia")?.toString() as string);
 
     if (!nombre || !categoria || !sitios || !votos) {
       return await ctx.render();
@@ -72,23 +70,28 @@ export default function Creation(props: PageProps) {
             >
               <div class="flex w-[50rem] justify-around">
                 <label htmlFor="nombre-ruta">Ruta</label>
-                <input type="text" name="nombre-ruta" />
+                <input required type="text" name="nombre-ruta" />
               </div>
               <div>
                 <label htmlFor="categoria">Categoria</label>
                 <select id="categorias" name="categoria">
                   <option value="ciudad">Ciudad</option>
-                  <option value="bosque">Bosuqe</option>
+                  <option value="bosque">Bosque</option>
                   <option value="area">Área</option>
                 </select>
               </div>
               <div>
                 <label htmlFor="sitio1">Sitio 1</label>
-                <input type="text" name="sitio1" />
+                <input required type="text" name="sitio1" />
                 <label htmlFor="sitio2">Sitio 2</label>
-                <input type="text" name="sitio2" />
+                <input required type="text" name="sitio2" />
                 <label htmlFor="sitio3">Sitio 3</label>
-                <input type="text" name="sitio3" />
+                <input required type="text" name="sitio3" />
+              </div>
+              <div>
+                <label htmlFor="resenia">Reseña</label>
+                <textarea required name="resenia" id="" cols={5} rows={5}>
+                </textarea>
               </div>
 
               <button
