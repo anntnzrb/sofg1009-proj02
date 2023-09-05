@@ -237,6 +237,11 @@ desarrolladores del equipo.
 == Frontend
 
 #figure(
+  image("../assets/front/front_page_main.png", width: 100%),
+  caption: "Frontend: Landing Page"
+)
+
+#figure(
   image("../assets/front/front_page_ciudades.png", width: 100%),
   caption: "Frontend: Sección de Ciudades"
 )
@@ -249,6 +254,16 @@ desarrolladores del equipo.
 #figure(
   image("../assets/front/front_page_bosques.png", width: 100%),
   caption: "Frontend: Sección de Áreas Protegidas"
+)
+
+#figure(
+  image("../assets/front/front_page_resenias.png", width: 100%),
+  caption: "Frontend: Sección de Reseñas"
+)
+
+#figure(
+  image("../assets/front/front_page_resenias_agregar.png", width: 100%),
+  caption: "Frontend: Sección de Reseñas - Agregar"
 )
 
 #pagebreak()
