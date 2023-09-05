@@ -1,11 +1,18 @@
-import { postReseniaData } from "../../../utils/HelpersMethods.tsx";
+import {
+  getRutaData,
+  postReseniaData,
+} from "../../../utils/HelpersMethods.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { BackButton } from "../../../islands/BackButton.tsx";
 import { asset, Head } from "$fresh/runtime.ts";
 import Nav2 from "../../../components/Nav2.tsx";
-import Nav from "../../../components/Nav.tsx";
 
 export const handler: Handlers = {
+  async GET(req, ctx) {
+    const { id } = ctx.params;
+    const rutaData: Ruta = await getRutaData(id);
+    return ctx.render({ rutaData });
+  },
   async POST(req, ctx) {
     const { id } = ctx.params;
     const form = await req.formData();
@@ -24,21 +31,16 @@ export const handler: Handlers = {
 };
 
 export default function ReseniaForm(props: PageProps) {
-  const { id } = props.params;
+  const id = props.params.id;
   const ruta = "/resenia/" + id;
+  const nombreRuta: Ruta = props.data.rutaData.nombre;
+
   return (
     <>
       <Head>
         <title>Turismo Ecuador</title>
       </Head>
-      <div class="bg-red-100">
-        <Nav active="/" />
 
-        <div>
-          Hello!
-          {/* {rutas.map((r) => <h1 class="text-2xl">{r.ciudad}</h1>)} */}
-        </div>
-      </div>
       <Nav2 active="/" />
       <main
         class="w-full flex px-8 py-10 min-h-[24em] justify-center items-center flex-col gap-8 bg-cover bg-center bg-no-repeat bg-gray-100"
@@ -57,29 +59,33 @@ export default function ReseniaForm(props: PageProps) {
               class="grid grid-rows-4 grid-cols-1 place-items-center h-[32rem] w-[48rem] font-semibold text-[20px] "
               style=""
             >
-                <div class="flex w-[50rem] justify-around">
-                <label htmlFor="nombre-ruta"> Ruta </label>
-                <p name="nombre-ruta" >Nombre de la ruta </p>
-                </div>
-                <div class="flex w-[50rem] justify-around">
-                <label class="font-semibold" htmlFor="autor">Autor</label>
-                <input type="text" name="autor" class=" border-2 border-green-400"/>
-                </div>
-                <div class="flex w-[50rem] justify-around">
+              <div class="flex w-[50rem] justify-around">
+                <label htmlFor="nombre-ruta">Ruta</label>
+                <p name="nombre-ruta">{nombreRuta}</p>
+              </div>
+              <div class="flex w-[50rem] justify-around">
                 <label htmlFor="comentario">Comentario</label>
-                <textarea name="comentario" class="w-[300px] border-2 border-green-400"/>
-                </div>
-                <div class="flex w-[50rem] justify-around">
+                <textarea
+                  name="resenia"
+                  class="w-[300px] border-2 border-green-400"
+                />
+              </div>
+              <div class="flex w-[50rem] justify-around">
                 <label htmlFor="calificacion">Calificación</label>
-                <input type="number" name="calificacion" min="1" max="5" class="border-2 border-green-400" />
-                </div>
-                <button
-                  type="submit"
-                  class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
-                >
-                  Enviar
-                </button>
-              
+                <input
+                  type="number"
+                  name="calificacion"
+                  min="1"
+                  max="5"
+                  class="border-2 border-green-400"
+                />
+              </div>
+              <button
+                type="submit"
+                class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
+              >
+                Enviar
+              </button>
             </form>
           </div>
         </div>

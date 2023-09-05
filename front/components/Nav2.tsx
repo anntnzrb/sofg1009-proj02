@@ -37,7 +37,7 @@ export default function Header({ active }: Props) {
         </a>
       </div>
       <div>
-        <h1>Contact us</h1>
+        <h1>Contáctanos</h1>
         <p>0988954818</p>
       </div>
     </div>

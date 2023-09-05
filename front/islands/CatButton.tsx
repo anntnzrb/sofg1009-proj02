@@ -1,6 +1,4 @@
-import { JSX } from "preact";
 import { useState } from "preact/hooks";
-import { handler } from "../routes/[cat].tsx";
 
 interface Props {
   ruta: string;

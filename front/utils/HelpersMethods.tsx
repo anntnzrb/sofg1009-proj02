@@ -45,14 +45,10 @@ export const getReseniaData = async (id: string): Promise<Resenia[]> => {
     throw new Error(`Failed to fetch resenia data with status: ${res.status}`);
   }
   const data = await res.json();
-
-  const resenias: Resenia[] = Object.keys(data).map((key) => {
-    return {
-      id: key,
-      comentario: data[key],
-    };
-  });
-
+  const resenias: Resenia[] = Object.entries(data).map(([id, comentario]) => ({
+    id,
+    comentario,
+  }));
   return resenias;
 };
 
