@@ -6,13 +6,41 @@ import { getRutaData, postRutaData } from "../../utils/HelpersMethods.tsx";
 export const handler: Handlers = {
   async POST(req, ctx) {
     const form = await req.formData();
-    const nombre = form.get("nombre")?.toString();
-    const resenia: Resenia[] = [];
+    const categoria = form.get("categoria")?.toString();
+    const sitios: Sitio[] = [];
+    const nombre = form.get("nombre-ruta")?.toString();
+    const votos = "0";
+    const resenias: string[] = [];
+    if (
+      form.get("sitio1")?.toString() != null &&
+      form.get("sitio2")?.toString() != null &&
+      form.get("sitio3")?.toString() != null
+    ) {
+      const sitio1: Sitio = {
+        nombre: form.get("sitio1")?.toString() as string,
+        ciudad: "sdsdadsad",
+      };
+      const sitio2: Sitio = {
+        nombre: form.get("sitio2")?.toString() as string,
+        ciudad: "sdsdadsad",
+      };
+      const sitio3: Sitio = {
+        nombre: form.get("sitio3")?.toString() as string,
+        ciudad: "sdsdadsad",
+      };
 
-    if (!nombre || !resenia) {
+      sitios.push(sitio1);
+      sitios.push(sitio2);
+      sitios.push(sitio3);
+    }
+
+    const sitio2 = form.get("sitio2")?.toString();
+    const sitio3 = form.get("sitio3")?.toString();
+
+    if (!nombre || !categoria || !sitios || !votos) {
       return await ctx.render();
     }
-    await postRutaData(nombre, resenia);
+    await postRutaData(nombre, categoria, resenias, sitios, votos);
     return new Response(null, {
       status: 302,
       headers: {
@@ -44,14 +72,23 @@ export default function Creation(props: PageProps) {
             >
               <div class="flex w-[50rem] justify-around">
                 <label htmlFor="nombre-ruta">Ruta</label>
-                <p name="nombre-ruta">nombreRuta</p>
+                <input type="text" name="nombre-ruta" />
               </div>
-              <div class="flex w-[50rem] justify-around">
-                <label htmlFor="comentario">Comentario</label>
-                <textarea
-                  name="resenia"
-                  class="w-[300px] border-2 border-green-400"
-                />
+              <div>
+                <label htmlFor="categoria">Categoria</label>
+                <select id="categorias" name="categoria">
+                  <option value="ciudad">Ciudad</option>
+                  <option value="bosque">Bosuqe</option>
+                  <option value="area">Área</option>
+                </select>
+              </div>
+              <div>
+                <label htmlFor="sitio1">Sitio 1</label>
+                <input type="text" name="sitio1" />
+                <label htmlFor="sitio2">Sitio 2</label>
+                <input type="text" name="sitio2" />
+                <label htmlFor="sitio3">Sitio 3</label>
+                <input type="text" name="sitio3" />
               </div>
 
               <button

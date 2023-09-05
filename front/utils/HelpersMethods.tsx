@@ -72,7 +72,8 @@ export const postReseniaData = async (
 export const postRutaData = async (
   nombre: string,
   categoria: string,
-  sitios: string[],
+  resenias: string[],
+  sitios: Sitio[],
   votos: string,
 ): Promise<void> => {
   const res = await fetch(BACKEND_URL, {
@@ -80,7 +81,7 @@ export const postRutaData = async (
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ nombre, categoria, sitios, votos }),
+    body: JSON.stringify({ nombre, categoria, resenias, sitios, votos }),
   });
 
   if (!res.ok) {
