@@ -3,11 +3,12 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $0 from "./routes/[cat].tsx";
-import * as $1 from "./routes/_404.tsx";
-import * as $2 from "./routes/_app.tsx";
-import * as $3 from "./routes/index.tsx";
-import * as $4 from "./routes/resenia/[id].tsx";
-import * as $5 from "./routes/resenia/[id]/create.tsx";
+import * as $1 from "./routes/[cat]/creation.tsx";
+import * as $2 from "./routes/_404.tsx";
+import * as $3 from "./routes/_app.tsx";
+import * as $4 from "./routes/index.tsx";
+import * as $5 from "./routes/resenia/[id].tsx";
+import * as $6 from "./routes/resenia/[id]/create.tsx";
 import * as $$0 from "./islands/BackButton.tsx";
 import * as $$1 from "./islands/CardResenia.tsx";
 import * as $$2 from "./islands/CatButton.tsx";
@@ -17,11 +18,12 @@ import * as $$4 from "./islands/ReseniaCreateButton.tsx";
 const manifest = {
   routes: {
     "./routes/[cat].tsx": $0,
-    "./routes/_404.tsx": $1,
-    "./routes/_app.tsx": $2,
-    "./routes/index.tsx": $3,
-    "./routes/resenia/[id].tsx": $4,
-    "./routes/resenia/[id]/create.tsx": $5,
+    "./routes/[cat]/creation.tsx": $1,
+    "./routes/_404.tsx": $2,
+    "./routes/_app.tsx": $3,
+    "./routes/index.tsx": $4,
+    "./routes/resenia/[id].tsx": $5,
+    "./routes/resenia/[id]/create.tsx": $6,
   },
   islands: {
     "./islands/BackButton.tsx": $$0,

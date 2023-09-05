@@ -69,6 +69,25 @@ export const postReseniaData = async (
   }
 };
 
+export const postRutaData = async (
+  nombre: string,
+  categoria: string,
+  sitios: string[],
+  votos: string,
+): Promise<void> => {
+  const res = await fetch(BACKEND_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ nombre, categoria, sitios, votos }),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to post ruta data with status: ${res.status}`);
+  }
+};
+
 export const deleteReseniaData = async (
   id: string,
   reseniaId: string,

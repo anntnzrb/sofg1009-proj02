@@ -18,7 +18,7 @@ export default function Header({ active }: Props) {
       </div>
       <div class="flex items-center gap-8">
         <a
-          href="ciudad"
+          href="/ciudad"
           class="text-gray-600 hover:underline"
         >
           Ciudad
