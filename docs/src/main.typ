@@ -26,6 +26,18 @@
 
 #pagebreak()
 
+= Problemática
+
+Como respuesta a la pandemia de *COVID-19*, se ha observado un incremento en la
+demanda de plataformas digitales tanto en el ámbito web como móvil. No obstante,
+es importante destacar que no todos los procesos y servicios se encuentran
+adecuadamente automatizados, y aún menos, existen plataformas gratuitas o de
+fácil acceso para el público en general.
+
+En este contexto, la asignatura de Lenguajes de Programación propone desarrollar
+soluciones innovadoras que contribuyan a una sociedad mejor equipada tanto en
+herramientas como en conocimientos.
+
 = Características del Proyecto
 
 == Categoría
@@ -120,8 +132,6 @@ sección pertinente.
 == Prototipo de Baja Fidelidad en Figma
 
 Se puede acceder a este prototipo a través del siguiente enlace:
-
-"#link("https://www.figma.com/file/uDqW4tQ2VsqLIWA1gc5mat/Travel-Agency-Website-Design-(Community)?type=design&node-id=0%3A1&mode=design&t=rRmFCOuROXjUkpPG-1")[Figma: Prototipo de Baja Fidelidad]"
 
 #figure(
   image("../assets/proto_01.png", width: 70%),
@@ -268,6 +278,33 @@ desarrolladores del equipo.
 
 #pagebreak()
 
+= Conclusiones
+
+== Lenguajes y Herramientas
+
+La elección de Ruby y Sinatra para el desarrollo del backend, así como Deno y
+Fresh para el frontend, se basó en una serie de consideraciones pragmáticas y
+estratégicas. Ruby, mediante su sintaxis felxible, facilita la escritura de
+código limpio y mantenible, mientras que Sinatra, con su enfoque minimalista,
+permite una mayor flexibilidad y menos sobrecarga en comparación con otros
+frameworks de Ruby. Por otro lado, Deno surge como una alternativa moderna a
+Node, ofreciendo características como seguridad por defecto y soporte para
+TypeScript de forma nativa. Fresh, por su parte, se destaca por su simplicidad y
+eficiencia, permitiendo un desarrollo ágil y eficiente del frontend. Estas
+tecnologías, en conjunto, proporcionan una solución robusta y flexible para el
+desarrollo de aplicaciones web, justificando plenamente su elección y uso.
+
+Es importante también resaltar que el empleo de estas tecnologías ha sido un
+reto para los integrantes de este grupo, ya que no teníamos ningún conocimiento
+previo sobre ellas. Sin embargo, esto nos ha permitido aprender nuevas
+habilidades y conocimientos que nos serán de gran utilidad en el futuro.
+
+== Experiencia y Aprendizaje
+
+== Resultados Alcanzados
+
+#pagebreak()
+
 = Anexos
 
 == Código Fuente
@@ -275,6 +312,20 @@ desarrolladores del equipo.
 El código fuente de este proyecto se encuentra disponible en el siguiente
 #link("https://github.com/anntnzrb/sofg1009-proj02")[enlance a GitHub] \
 `<https://github.com/anntnzrb/sofg1009-proj02>`.
+
+#pagebreak()
+
+== Listado de APIS
+
+- `/api/rutas`
+- `/api/rutas/:id/resenia`
+- `/api/rutas/:id1/resenia/:id2`
+- `/api/rutas/:id`
+- `/api/rutas/:id`
+- `/api/rutas/categoria/:categoria`
+- `/api/rutas/categoria/:categoria`
+- `/api/rutas/ciudad/:ciudad`
+- `/api/rutas/resenia/:id`
 
 #pagebreak()
 
