@@ -68,7 +68,9 @@ export default function Creation(props: PageProps) {
               style=""
             >
               <div class="flex w-[50rem] justify-around mt-[50px]">
-                <label class="font-bold" htmlFor="nombre-ruta">Ruta</label>
+                <label class="font-bold" htmlFor="nombre-ruta">
+                  Nombre de Ruta
+                </label>
                 <input
                   class="border-4"
                   required
