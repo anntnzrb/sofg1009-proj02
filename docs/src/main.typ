@@ -300,6 +300,13 @@ previo sobre ellas. Sin embargo, esto nos ha permitido aprender nuevas
 habilidades y conocimientos que nos serán de gran utilidad en el futuro.
 
 == Experiencia y Aprendizaje
+El desarrollo del sitio web de turismo en Ecuador utilizando Deno Fresh y Ruby fue
+una experiencia complicada al incio pero despues fue mas facil de entender como 
+funciona cada lenguaje. El uso de Deno Fresh permitió un desarrollo de frontend fluido 
+y su arquitectura basada en islas facilitó la interactividad del lado del cliente. 
+La utilización de Ruby para el backend proporcionó una estructura robusta y eficiente, 
+ayudó poder trabajar con JSONs de manera sencilla. El uso de estos dos lenguajes 
+permitió la creación de un sitio web interactivo y agradable a la vista del usuario.
 
 == Resultados Alcanzados
 
