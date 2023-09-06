@@ -47,7 +47,7 @@ export default function CatPage(props: PageProps) {
       </div>
       <Nav2 active="/" />
       <main
-        class="w-full flex px-8 py-10 min-h-[24em] justify-center items-center flex-col gap-8 bg-cover bg-center bg-no-repeat bg-gray-100"
+        class="w-full flex px-8 py-10 min-h-screen justify-center items-center flex-col gap-8 bg-cover bg-center bg-no-repeat bg-gray-100"
         style={`background-image: url(${asset("/travelImg.png")})`}
       >
         <h1 class="text-3xl text-white font-bold">Turismo en Ecuador</h1>
