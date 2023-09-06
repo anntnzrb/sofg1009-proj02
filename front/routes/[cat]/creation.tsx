@@ -53,53 +53,82 @@ export default function Creation(props: PageProps) {
   return (
     <>
       <main
-        class="w-full flex px-8 py-10 min-h-[24em] justify-center items-center flex-col gap-8 bg-cover bg-center bg-no-repeat bg-gray-100"
+        class="w-full flex px-8 py-10 min-h-screen justify-center items-center flex-col gap-8 bg-cover bg-center bg-no-repeat bg-gray-100"
         style={`background-image: url(${asset("/travelImg.png")})`}
       >
         <h1 class="text-3xl text-white font-bold">Turismo en Ecuador</h1>
 
-        <div class="bg-white w-[56rem] h-[40rem] rounded-lg mb-[5rem] justify-items-center ">
-          <div class="grid grid-rows-2 grid-cols-1 justify-items-center h-[8rem] mt-8">
-            <h1 class="text-2xl font-bold text-gray-700 w-max col-span-2 h-lg">
+        <div class="bg-white max-w-max max-h-max rounded-lg  ">
+          <div class="">
+            <h1 class="text-2xl font-bold text-gray-700 text-center mt-[20px]">
               Añadir Ruta
             </h1>
             <form
               method="POST"
-              class="grid grid-rows-4 grid-cols-1 place-items-center h-[32rem] w-[48rem] font-semibold text-[20px] "
+              class=""
               style=""
             >
-              <div class="flex w-[50rem] justify-around">
-                <label htmlFor="nombre-ruta">Ruta</label>
-                <input required type="text" name="nombre-ruta" />
+              <div class="flex w-[50rem] justify-around mt-[50px]">
+                <label class="font-bold" htmlFor="nombre-ruta">Ruta</label>
+                <input
+                  class="border-4"
+                  required
+                  type="text"
+                  name="nombre-ruta"
+                />
               </div>
-              <div>
-                <label htmlFor="categoria">Categoria</label>
+              <div class="flex gap-[350px] mt-[50px] justify-center ">
+                <label class="font-bold" htmlFor="categoria">Categoria</label>
                 <select id="categorias" name="categoria">
                   <option value="ciudad">Ciudad</option>
                   <option value="bosque">Bosque</option>
                   <option value="area">Área</option>
                 </select>
               </div>
-              <div>
-                <label htmlFor="sitio1">Sitio 1</label>
-                <input required type="text" name="sitio1" />
-                <label htmlFor="sitio2">Sitio 2</label>
-                <input required type="text" name="sitio2" />
-                <label htmlFor="sitio3">Sitio 3</label>
-                <input required type="text" name="sitio3" />
+              <div class="grid grid-cols-2 grid-rows-3 mt-[80px] justify-items-center gap-8 mr-[50px]">
+                <label class="font-bold" htmlFor="sitio1">Sitio 1</label>
+                <input
+                  class="border-4 max-w-[200px]"
+                  required
+                  type="text"
+                  name="sitio1"
+                />
+                <label class="font-bold" htmlFor="sitio2">Sitio 2</label>
+                <input
+                  class="border-4 max-w-[200px]"
+                  required
+                  type="text"
+                  name="sitio2"
+                />
+                <label class="font-bold" htmlFor="sitio3">Sitio 3</label>
+                <input
+                  class="border-4 max-w-[200px]"
+                  required
+                  type="text"
+                  name="sitio3"
+                />
               </div>
-              <div>
-                <label htmlFor="resenia">Reseña</label>
-                <textarea required name="resenia" id="" cols={5} rows={5}>
+              <div class=" flex mt-[50px] gap-[100px] justify-center">
+                <label class="font-bold" htmlFor="resenia">Reseña</label>
+                <br />
+                <textarea
+                  class="border-4"
+                  required
+                  name="resenia"
+                  id=""
+                  cols={30}
+                  rows={2}
+                >
                 </textarea>
               </div>
-
-              <button
-                type="submit"
-                class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
-              >
-                Enviar
-              </button>
+              <div class="flex justify-center ">
+                <button
+                  type="submit"
+                  class=" my-[50px] bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded "
+                >
+                  Enviar
+                </button>
+              </div>
             </form>
           </div>
         </div>
