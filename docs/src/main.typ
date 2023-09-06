@@ -309,6 +309,11 @@ ayudó poder trabajar con JSONs de manera sencilla. El uso de estos dos lenguaje
 permitió la creación de un sitio web interactivo y agradable a la vista del usuario.
 
 == Resultados Alcanzados
+Se logró desarrollar un sitio web de turismo en Ecuador que permite a los usuarios
+explorar diferentes rutas turísticas categorizadas como Ciudad, Bosque y Área Protegida.
+Además, se logró implementar una funcionalidad de búsqueda bajo ciertos parámetros.
+Esto permitirá a los usuarios encontrar lugares específicos según sus preferencias,
+como el tipo de entorno (ciudad, bosque, área protegida), entre otras.
 
 #pagebreak()
 
