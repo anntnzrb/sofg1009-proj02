@@ -2,8 +2,8 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { asset, Head } from "$fresh/runtime.ts";
 import Nav2 from "../components/Nav2.tsx";
 import Nav from "../components/Nav.tsx";
-import Card from "../components/Card.tsx";
-import { getCategoryData } from "../utils/HelpersMethods.tsx";
+import Card from "../islands/Card.tsx";
+import { deleteRutaData, getCategoryData } from "../utils/HelpersMethods.tsx";
 import { CatButton } from "../islands/CatButton.tsx";
 import { useState } from "preact/hooks";
 
@@ -12,6 +12,23 @@ export const handler: Handlers = {
     const { cat } = context.params;
     const rutasResult: Ruta[] = await getCategoryData("/categoria/" + cat);
     return context.render(rutasResult);
+  },
+  async POST(request, context) {
+    const { id } = context.params;
+    const form = await request.formData();
+    const ruta_id = form.get("id")?.toString();
+    if (!ruta_id) {
+      console.error("No ruta_id");
+      return await context.render();
+    }
+    await deleteRutaData(ruta_id);
+    console.log("Deleted ruta_id:", ruta_id);
+    return new Response(null, {
+      status: 302,
+      headers: {
+        "Location": `/${context.params.cat}`,
+      },
+    });
   },
 };
 

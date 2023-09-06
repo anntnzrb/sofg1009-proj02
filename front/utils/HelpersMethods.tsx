@@ -104,3 +104,13 @@ export const deleteReseniaData = async (
     );
   }
 };
+
+export const deleteRutaData = async (id: string): Promise<void> => {
+  const res = await fetch(BACKEND_URL + `/${id}`, {
+    method: "DELETE",
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to delete ruta data with status: ${res.status}`);
+  }
+};

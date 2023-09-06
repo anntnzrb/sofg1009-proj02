@@ -10,10 +10,11 @@ import * as $4 from "./routes/index.tsx";
 import * as $5 from "./routes/resenia/[id].tsx";
 import * as $6 from "./routes/resenia/[id]/create.tsx";
 import * as $$0 from "./islands/BackButton.tsx";
-import * as $$1 from "./islands/CardResenia.tsx";
-import * as $$2 from "./islands/CatButton.tsx";
-import * as $$3 from "./islands/ReseniaButton.tsx";
-import * as $$4 from "./islands/ReseniaCreateButton.tsx";
+import * as $$1 from "./islands/Card.tsx";
+import * as $$2 from "./islands/CardResenia.tsx";
+import * as $$3 from "./islands/CatButton.tsx";
+import * as $$4 from "./islands/ReseniaButton.tsx";
+import * as $$5 from "./islands/ReseniaCreateButton.tsx";
 
 const manifest = {
   routes: {
@@ -27,10 +28,11 @@ const manifest = {
   },
   islands: {
     "./islands/BackButton.tsx": $$0,
-    "./islands/CardResenia.tsx": $$1,
-    "./islands/CatButton.tsx": $$2,
-    "./islands/ReseniaButton.tsx": $$3,
-    "./islands/ReseniaCreateButton.tsx": $$4,
+    "./islands/Card.tsx": $$1,
+    "./islands/CardResenia.tsx": $$2,
+    "./islands/CatButton.tsx": $$3,
+    "./islands/ReseniaButton.tsx": $$4,
+    "./islands/ReseniaCreateButton.tsx": $$5,
   },
   baseUrl: import.meta.url,
 };
