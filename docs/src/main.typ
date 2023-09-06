@@ -267,6 +267,11 @@ desarrolladores del equipo.
 )
 
 #figure(
+  image("../assets/front/front_page_ruta_agregar.png", width: 100%),
+  caption: "Frontend: Sección de Rutas - Agregar"
+)
+
+#figure(
   image("../assets/front/front_page_resenias.png", width: 100%),
   caption: "Frontend: Sección de Reseñas"
 )
@@ -307,6 +312,8 @@ y su arquitectura basada en islas facilitó la interactividad del lado del clien
 La utilización de Ruby para el backend proporcionó una estructura robusta y eficiente, 
 ayudó poder trabajar con JSONs de manera sencilla. El uso de estos dos lenguajes 
 permitió la creación de un sitio web interactivo y agradable a la vista del usuario.
+
+#pagebreak()
 
 == Resultados Alcanzados
 Se logró desarrollar un sitio web de turismo en Ecuador que permite a los usuarios
