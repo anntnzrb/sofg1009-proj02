@@ -22,7 +22,6 @@ export const handler: Handlers = {
       return await context.render();
     }
     await deleteRutaData(ruta_id);
-    console.log("Deleted ruta_id:", ruta_id);
     return new Response(null, {
       status: 302,
       headers: {

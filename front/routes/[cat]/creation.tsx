@@ -49,7 +49,6 @@ export const handler: Handlers = {
 };
 
 export default function Creation(props: PageProps) {
-  console.log(props);
   return (
     <>
       <main

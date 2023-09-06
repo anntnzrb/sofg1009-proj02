@@ -26,7 +26,6 @@ export const handler: Handlers = {
       return await context.render();
     }
     await deleteReseniaData(id, resenia_id);
-    console.log("Deleted resenia_id:", resenia_id);
     return new Response(null, {
       status: 302,
       headers: {

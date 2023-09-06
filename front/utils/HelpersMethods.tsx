@@ -93,7 +93,6 @@ export const deleteReseniaData = async (
   id: string,
   reseniaId: string,
 ): Promise<void> => {
-  console.log(BACKEND_URL + `/${id}/resenia/${reseniaId}`);
   const res = await fetch(BACKEND_URL + `/${id}/resenia/${reseniaId}`, {
     method: "DELETE",
   });

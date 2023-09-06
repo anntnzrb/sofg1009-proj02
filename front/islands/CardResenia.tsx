@@ -18,16 +18,6 @@ export default function CardResenia(
             <button
               type="submit"
               title="Eliminar comentario"
-              /*onSubmit={async (event) => {
-        event.preventDefault();
-        try {
-          await deleteReseniaData(ruta_id, resenia_id);
-          console.log("Deleted resenia_id:", resenia_id);
-          window.location.reload();
-        } catch (error) {
-          console.error("Error deleting resenia:", error);
-        }
-      }}*/
             >
               <svg
                 style={{ pointerEvents: "none" }}
